@@ -20,9 +20,9 @@ const Header: React.FC = () => {
        </div>
       </div>
       <div className='ml-28'>
-        <button className='h-[38px] w-[125px] text-[15px] font-bold shadow-xs bg-white rounded-[5px] hover:bg-gray-100 transition-colors cursor-pointer'>
+        <div className='h-[38px] w-[125px] text-[15px] font-bold shadow-xs bg-white rounded-[5px] hover:bg-gray-100 transition-colors cursor-pointer flex justify-center items-center'>
           Sign In
-        </button>
+        </div>
       </div>
     </header>
   )

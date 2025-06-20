@@ -1,37 +1,12 @@
-'use client'
 import Header from "@/components/Header";
 import Image from "next/image";
 import Arrow from '../../public/icons/Arrow'
 import Frame from '../../public/icons/Frame'
 import heroImage from '../../public/images/hero-image.jpg'
-import bike from '../../public/images/Bike.jpg'
-import ride1 from '../../public/images/ride-1.jpg'
-import ride2 from '../../public/images/ride-2.jpg'
-import ride3 from '../../public/images/ride-3.jpg'
-import RideSectionCard from "@/components/RideSectionCard";
-import Phone from '../../public/icons/Phone'
 import customer from '../../public/images/customer.jpg'
 import bullet from '../../public/images/Bullet.svg'
 import bannar1 from '../../public/images/Banner1-Image.jpg'
 import logo from '../../public/images/logo.png'
-import hero from '../../public/images/Hero.svg'
-import honda from '../../public/images/Honda.svg'
-import bajaj from '../../public/images/Bajaj.svg'
-import tvs from '../../public/images/TVS.svg'
-import royalEnfield from '../../public/images/royalEnfield.svg'
-import yamaha from '../../public/images/Yamaha.svg'
-import ktm from '../../public/images/KTM.svg'
-import ather from '../../public/images/Ather.svg'
-import ola from '../../public/images/OlaElectric.svg'
-import revolt from '../../public/images/Revolt.svg'
-import ultravoilette from '../../public/images/Ultraviolette.svg'
-import tork from '../../public/images/tork.svg'
-import bgLines from '../../public/images/bg-lines.jpg'
-import service1 from '../../public/images/service-1.jpg'
-import service2 from '../../public/images/service-2.jpg'
-import service3 from '../../public/images/service-3.jpg'
-import service4 from '../../public/images/service-4.jpg'
-import Services from "@/components/Services";
 import banner2 from '../../public/images/banner-2.jpg'
 import background from '../../public/images/Background.jpg'
 import google from '../../public/images/googlePlay.jpg'
@@ -46,71 +21,10 @@ import RequestForm from "@/components/RequestForm";
 import tour from '../../public/images/tour.jpg'
 import TestimonialSection from "@/components/Testimonials";
 import Subscribe from "@/components/Subscribe";
-import { useEffect, useState } from "react";
+import OurServices from "@/components/OurServices";
+import BikeCompnaies from "@/components/BikeCompnaies";
 
 export default function Home() {
-  const rideDetails = [
-    {
-      id: 1,
-      image: ride1,
-      info: 'Lorem ipsum dolor sit amet consectetur. Vestibulum ornare fermentum feugiat.'
-    },
-    {
-      id: 2,
-      image: ride2,
-      info: 'Lorem ipsum dolor sit amet consectetur. Dictum at ac tellus faucibus urna ullamcorper id dui cursus. Venenatis.'
-    },
-    {
-      id:3,
-      image: ride3,
-      info: 'Lorem ipsum dolor sit amet consectetur. Vestibulum nisl morbi metus gravida eu facilisi enim. Ut diam auctor tortor tincidunt.'
-    }
-  ]
-  const bikeCompanies = [
-    {id: 1, image: hero, alt: 'Hero logo'},
-    {id: 2, image: honda, alt: 'Honda logo'},
-    {id: 3, image: bajaj, alt:'Bajaj logo'},
-    {id: 4, image: tvs, alt:'TVS logo'},
-    {id: 5, image: royalEnfield, alt: 'Royal Enfield Logo'},
-    {id: 6, image: yamaha, alt: 'Yamaha logo'},
-    {id: 7, image: ktm, alt: 'KTM logo'},
-    {id: 8, image: ather, alt: 'Ather Logo'},
-    {id: 9, image: ola, alt: 'Ola Electric logo'},
-    {id: 10, image: revolt, alt: 'Revolt logo'},
-    {id: 11, image: ultravoilette, alt: 'Ultravoilette logo'},
-    {id: 12, image: tork, alt: 'Tork logo'},
-  ]
-  const services =[
-    {
-      id: 1,
-      image: service1,
-      heading: 'Lorem ipsum dolor sit amet consectetur.' ,
-      info: 'Lorem ipsum dolor sit amet consectetur. Nunc gravida consequat faucibus cursus nisi. Nunc montes molestie a vitae vulputate. Phasellus in pulvinar et vitae. Mi eget lectus nec et. Libero iaculis diam nam mauris a eget. Quam nibh rhoncus rhoncus enim venenatis bibendum.'
-    },
-     {
-      id: 2,
-      image: service2,
-      heading: 'Lorem ipsum dolor sit amet consectetur.' ,
-      info: 'Lorem ipsum dolor sit amet consectetur. Nunc gravida consequat faucibus cursus nisi. Nunc montes molestie a vitae vulputate. Phasellus in pulvinar et vitae. Mi eget lectus nec et. Libero iaculis diam nam mauris a eget. Quam nibh rhoncus rhoncus enim venenatis bibendum.'
-    },
-     {
-      id: 3,
-      image: service3,
-      heading: 'Lorem ipsum dolor sit amet consectetur.' ,
-      info: 'Lorem ipsum dolor sit amet consectetur. Nunc gravida consequat faucibus cursus nisi. Nunc montes molestie a vitae vulputate. Phasellus in pulvinar et vitae. Mi eget lectus nec et. Libero iaculis diam nam mauris a eget. Quam nibh rhoncus rhoncus enim venenatis bibendum.'
-    },
-     {
-      id: 4,
-      image: service4,
-      heading: 'Lorem ipsum dolor sit amet consectetur.' ,
-      info: 'Lorem ipsum dolor sit amet consectetur. Nunc gravida consequat faucibus cursus nisi. Nunc montes molestie a vitae vulputate. Phasellus in pulvinar et vitae. Mi eget lectus nec et. Libero iaculis diam nam mauris a eget. Quam nibh rhoncus rhoncus enim venenatis bibendum.'
-    },
-  ]
-  const [mounted, setMounted] = useState(false)
-  useEffect(() => {
-  setMounted(true)
-}, []);
-if (!mounted) return null
   return (
     <>
     <Header />
@@ -132,39 +46,6 @@ if (!mounted) return null
           <Image src={heroImage} alt="hero image" className=" h-full w-full object-cover" />
            <div className="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-white to-transparent z-10"></div>
         </div>
-      </section>
-      <section className="ml-20 shadow-lg bg-[#FFFFFF99] border-[1px] border-[#D4D4D4] p-10 flex justify-between mb-[100px] relative">
-       <div className="w-1/2">
-        <h3 className="text-[#1959AC] text-2xl font-Inter font-semibold mb-8">
-          Lorem ipsum dolor sit
-        </h3>
-        <h1 className="xl:text-[42px] lg:text-4xl md:text-3xl text-2xl xl:leading-11 font-Roboto font-bold mb-8 pr-48">
-         LOREM IPSUM DOLOR SIT AMET
-        </h1>
-        <p className="font-Inter md:text-lg xl:pr-20 lg:pr-14 md:pr-10 px-5">
-          Lorem ipsum dolor sit amet consectetur. Amet sodales sociis facilisis donec dui. Mi porttitor ut aliquam mattis maecenas eget integer in nam. Non nisl iaculis at felis aliquet. Hendrerit tellus at purus lectus.
-        </p>
-        <div className="flex flex-col gap-5 mt-8">
-         {
-          rideDetails.map(({id, image, info})=>(
-            <RideSectionCard key={id} image={image} info={info} alt={`Ride image ${id}`} />
-          ))
-         }
-        </div>
-        <div className="flex gap-4 items-center mt-20">
-         <button className="bg-[#1959AC] hover:bg-blue-400 transition-colors w-[179px] h-[38px] text-white font-bold font-Inter text-[15px] flex justify-center items-center gap-3 rounded-[5px] cursor-pointer">
-          Loerum Ipsum <Arrow />
-         </button>
-         <div className="cursor-pointer font-Inter font-semibold flex items-center gap-2 text-[15px] text-[#1959AC]">
-          <Phone />
-          123456789
-         </div>
-        </div>
-       </div>
-       <div className="max-w-[629px]">
-        <Image src={bike} alt="bike image" />
-       </div>
-       <div className="h-5 w-[95%] linear-bg absolute -bottom-1 left-0"></div>
       </section>
       <section className="pl-20 xl:mb-[100px] lg:mb-20 md:mb-14 mb-10 flex justify-between relative">
         <div className="mb-8">
@@ -200,6 +81,7 @@ if (!mounted) return null
         </div>
         <div className="h-5 max-w-[92%] min-w-[92%] linear-bg absolute -bottom-1 right-0"></div>
       </section>
+      <BikeCompnaies />
       <section className="w-full bg-center bg-cover p-16 xl:mb-[100px] lg:mb-20 md:mb-14 mb-10" style={{
         backgroundImage: `url(${bannar1.src})`,
       }}>
@@ -223,42 +105,7 @@ if (!mounted) return null
        </div>
       </div>
       </section>
-      <section className="xl:mb-[100px] lg:mb-20 md:mb-14 mb-10">
-       <h1 className="xl:text-[42px] lg:text-4xl md:text-3xl text-2xl xl:leading-11 font-Roboto font-bold mb-20 text-center px-60">
-         LOREM IPSUM DOLOR SIT AMET CONSECTETUR. COMMODO LEO AMET.
-        </h1>
-        <div className="max-w-[1112px] mx-auto grid grid-cols-4 gap-16 justify-between">
-         {
-          bikeCompanies.map(({id, image, alt})=>(
-            <Image key={id} src={image} alt={alt} className="object-cover" />
-          ))
-         }
-        </div>
-      </section>
-      <section className="xl:mb-[100px] lg:mb-20 md:mb-14 mb-10 bg-cover bg-center"
-      style={{
-        backgroundImage: `url(${bgLines.src})`
-      }}
-      >
-      <div className="pl-20 mb-20">
-         <h3 className="text-[#1959AC] text-2xl font-Inter font-semibold mb-8">
-            Lorem ipsum dolor sit amet
-          </h3>
-          <h1 className="txl:text-[42px] lg:text-4xl md:text-3xl text-2xl xl:leading-11 font-Roboto font-bold mb-8">
-         LOREM IPSUM DOLOR SIT 
-        </h1>
-        <p className="font-Inter md:text-lg md:w-[670px]">
-          Lorem ipsum dolor sit amet consectetur. Amet sodales sociis facilisis donec dui. Mi porttitor ut aliquam mattis maecenas eget integer in nam. Non nisl iaculis at felis aliquet. Hendrerit tellus at purus lectus. 
-        </p>
-      </div>
-      <div className="flex flex-wrap gap-16 justify-center">
-       {
-        services.map(({id, image, heading, info})=>(
-          <Services key={id} image={image} heading={heading} info={info} alt={`Services Image ${id}`} />
-        ))
-       }
-      </div>
-      </section>
+       <OurServices/>
        <section className="w-full bg-center bg-cover p-16 xl:mb-[100px] lg:mb-20 md:mb-14 mb-10 pb-52" style={{
         backgroundImage: `url(${banner2.src})`,
       }}>
@@ -356,9 +203,9 @@ if (!mounted) return null
           <p className="font-Inter md:text-lg pr-2 mb-8">
           Lorem ipsum dolor sit amet consectetur. In malesuada morbi mi blandit laoreet urna sapien quam pulvinar. Dolor aliquet est tortor tincidunt ultricies feugiat mauris. Aliquam platea turpis porta nisl felis. Massa in facilisis semper libero eget eu quisque bibendum platea. Tortor fames.
         </p>
-        <button className="w-[179px] h-[38px] text-white bg-[#1959AC] rounded-[5px] flex justify-center items-center gap-2 cursor-pointer hover:bg-blue-400">
+        <div className="w-[179px] h-[38px] text-white bg-[#1959AC] rounded-[5px] cursor-pointer hover:bg-blue-400 flex justify-center items-center">
           Loerum Ipsum
-        </button>
+        </div>
       </div>
       <div className="max-w-[570px] w-full absolute right-4 -top-14">
        <Image src={sales} alt="Sales Image" placeholder="blur" className="object-cover w-full" />
@@ -420,9 +267,9 @@ if (!mounted) return null
           <p className="font-Inter md:text-lg md:text-center px-10 md:w-[520px]">
     Lorem ipsum dolor sit amet consectetur. Nisl faucibus vitae porttitor pharetra tempor quis arcu. Ipsum nullam.
         </p>
-          <button className="bg-[#1959AC] hover:bg-blue-400 transition-colors w-[179px] h-[38px] text-white font-bold font-Inter text-[15px] flex justify-center items-center gap-3 rounded-[5px] cursor-pointer">
+          <div className="bg-[#1959AC] hover:bg-blue-400 transition-colors w-[179px] h-[38px] text-white font-bold font-Inter text-[15px] flex justify-center items-center gap-3 rounded-[5px] cursor-pointer">
           Loerum Ipsum <Arrow />
-         </button>
+         </div>
       </section>
     </main>
     <Footer />

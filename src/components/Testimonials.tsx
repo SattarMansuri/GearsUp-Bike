@@ -78,11 +78,10 @@ const TestimonialSection: React.FC = () => {
               Dui euismod iaculis libero, aliquet vitae et elementum porttitor. Eleifend mi tristique condimentum congue fusce nunc, donec magnis commodo.
             </p>
           </div>
-          <button className="bg-white text-blue-600 font-semibold px-4 py-2 rounded mb-10 h-[38px] max-w-[238px]">
+          <div className="bg-white text-blue-600 font-semibold px-4 py-2 rounded mb-10 h-[38px] max-w-[238px]">
             Lorem Ipsum
-          </button>
+          </div>
         </div>
-
         <Swiper
           modules={[Navigation]}
           spaceBetween={24}
