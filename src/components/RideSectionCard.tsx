@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 interface RideCardProps{
 image: StaticImport,
-info: String,
+info: string,
 alt: string
 }
 

@@ -307,8 +307,8 @@ export default function Home() {
       ))
      }
         </div>
-          <button className="w-[179px] h-[38px] text-white bg-[#1959AC] rounded-[5px] flex justify-center items-center gap-2 cursor-pointer hover:bg-blue-400 transition-colors">
-          Loerum Ipsum <Arrow />
+          <button className="w-[179px] h-[38px] text-white bg-[#1959AC] rounded-[5px] flex justify-center items-center gap-2 cursor-pointer hover:bg-blue-400">
+          Loerum Ipsum
         </button>
       </div>
        <div className="h-5 w-[95%] linear-bg absolute bottom-0 left-0 z-0"></div>
@@ -333,9 +333,9 @@ export default function Home() {
         <p className="text-gray-600 font-Inter md:text-lg pr-24 mb-8">
           Egestas fringilla aliquam leo, habitasse arcu varius lorem elit. Neque pellentesque donec et tellus ac varius tortor, bibendum. Nulla felis ac turpis at amet. Purus malesuada placerat arcu at enim elit in accumsan.
         </p>
-        <button className="text-[#1959AC] flex gap-2 items-center font-Roboto font-medium">
-          Check Tools <Arrow fill="#1959AC" />
-        </button>
+        <div className="text-[#1959AC] font-Roboto font-medium">
+          Check Tools
+        </div>
       </div>
       <div>
         <Image src={trust} alt="Customer trust Image" className="object-cover max-w-[600px]" />
@@ -349,8 +349,8 @@ export default function Home() {
           <p className="font-Inter md:text-lg pr-2 mb-8">
           Lorem ipsum dolor sit amet consectetur. In malesuada morbi mi blandit laoreet urna sapien quam pulvinar. Dolor aliquet est tortor tincidunt ultricies feugiat mauris. Aliquam platea turpis porta nisl felis. Massa in facilisis semper libero eget eu quisque bibendum platea. Tortor fames.
         </p>
-        <button className="w-[179px] h-[38px] text-white bg-[#1959AC] rounded-[5px] flex justify-center items-center gap-2 cursor-pointer hover:bg-blue-400 transition-colors">
-          Loerum Ipsum <Arrow />
+        <button className="w-[179px] h-[38px] text-white bg-[#1959AC] rounded-[5px] flex justify-center items-center gap-2 cursor-pointer hover:bg-blue-400">
+          Loerum Ipsum
         </button>
       </div>
       <div className="max-w-[570px] w-full absolute right-4 -top-14">
@@ -389,9 +389,9 @@ export default function Home() {
          <p className="md:text-lg font-Inter mb-5 lg:pr-20 md:pr-12 px-5">
           Enim sagittis, sit porttitor morbi lobortis amet, libero adipiscing auctor. Malesuada tristique libero, id netus tincidunt. Egestas ac arcu amet nisl quis est ...
          </p>
-         <button className="flex justify-center items-center gap-4 text-[#1959AC] cursor-pointer">
-           Read Full Story <Arrow fill="#1959AC" />
-         </button>
+         <div className="flex justify-center items-center gap-4 text-[#1959AC] cursor-pointer">
+           Read Full Story
+         </div>
         </div>
         </div>
       </section>

@@ -24,7 +24,7 @@ const Accordian = () => {
         return () => {
           document.removeEventListener('mousedown', handleOutsideClick);
         };
-      }, [isOpen]);
+      }, [handleOutsideClick]);
   return (
     <div ref={accordianRef} onClick={()=>setIsOpen(!isOpen)} className='md:p-5 p-4 border-b-[1px] border-[#11111133] flex justify-between items-center cursor-pointer transition-all delay-300 ease-out'>
      <div className='flex flex-col gap-4'>

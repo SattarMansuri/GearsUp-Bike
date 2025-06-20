@@ -5,8 +5,8 @@ import React from 'react'
 interface ServicesCards{
     image: StaticImport,
     alt: string,
-    heading: String,
-    info: String
+    heading: string,
+    info: string
 }
 
 const Services: React.FC<ServicesCards> = (props) => {
