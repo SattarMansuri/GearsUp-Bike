@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "../components/Header";
 import Image from "next/image";
 import Arrow from '../../public/icons/Arrow'
 import Frame from '../../public/icons/Frame'
@@ -8,7 +8,7 @@ import bullet from '../../public/images/Bullet.svg'
 import bannar1 from '../../public/images/Banner1-Image.jpg'
 import logo from '../../public/images/logo.png'
 import banner2 from '../../public/images/banner-2.jpg'
-import background from '../../public/images/Background.jpg'
+import background from '../../public/images/background.jpg'
 import google from '../../public/images/googlePlay.jpg'
 import appStor from '../../public/images/appStore.jpg'
 import trust from '../../public/images/trust.jpg'

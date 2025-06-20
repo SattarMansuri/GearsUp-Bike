@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import logo from '../../public/images/logo.png'
-import DownArrow from '../../public/icons/downArrow'
+import DownArrow from '../../public/icons/DownArrow'
 
 const Header: React.FC = () => {
   return (
