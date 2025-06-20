@@ -1,3 +1,4 @@
+'use client'
 import Header from "@/components/Header";
 import Image from "next/image";
 import Arrow from '../../public/icons/Arrow'
@@ -45,6 +46,7 @@ import RequestForm from "@/components/RequestForm";
 import tour from '../../public/images/tour.jpg'
 import TestimonialSection from "@/components/Testimonials";
 import Subscribe from "@/components/Subscribe";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const rideDetails = [
@@ -104,6 +106,11 @@ export default function Home() {
       info: 'Lorem ipsum dolor sit amet consectetur. Nunc gravida consequat faucibus cursus nisi. Nunc montes molestie a vitae vulputate. Phasellus in pulvinar et vitae. Mi eget lectus nec et. Libero iaculis diam nam mauris a eget. Quam nibh rhoncus rhoncus enim venenatis bibendum.'
     },
   ]
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
+  setMounted(true)
+}, []);
+if (!mounted) return null
   return (
     <>
     <Header />
@@ -307,7 +314,7 @@ export default function Home() {
       ))
      }
         </div>
-          <button className="w-[179px] h-[38px] text-white bg-[#1959AC] rounded-[5px] flex justify-center items-center gap-2 cursor-pointer hover:bg-blue-400">
+          <button className="w-[179px] h-[38px] text-white bg-[#1959AC] rounded-[5px] cursor-pointer hover:bg-blue-400">
           Loerum Ipsum
         </button>
       </div>
